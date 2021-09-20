@@ -209,7 +209,7 @@ button {
 		function getmobileplanlist() {
 			var idn =document.getElementById('id').value;  
 			var xhr = new XMLHttpRequest();
-			xhr.open("GET", "http://localhost:8080/mp", false);
+			xhr.open("GET", "http://localhost:8080/audit", false);
 			xhr.send();
 			var mpList = xhr.response;
 			var mobilePlans = JSON.parse(mpList)
@@ -219,7 +219,7 @@ button {
              {
                     if( mobilePlans[i].id==idn)
                     {
-                        mobilePlanList.innerHTML += '<li>' + mobilePlans[i].id +"&nbsp;&nbsp;&nbsp;&nbsp;"+ mobilePlans[i].name +"&nbsp;&nbsp;&nbsp;&nbsp;"+ mobilePlans[i].description +"&nbsp;&nbsp;&nbsp;&nbsp;"+ mobilePlans[i].validity + '</li>';
+                        mobilePlanList.innerHTML += '<li>' + mobilePlans[i].id +"&nbsp;&nbsp;&nbsp;&nbsp;"+ mobilePlans[i].operationType +"&nbsp;&nbsp;&nbsp;&nbsp;"+ mobilePlans[i].entityJson +"&nbsp;&nbsp;&nbsp;&nbsp;"+ mobilePlans[i].validity + '</li>';
  						flag = 1;
                     }
               }
@@ -232,7 +232,7 @@ button {
 	</script>
 </head>
 <body style="background-color: #E6E6FA" >
-<mypage style="text-align:center; font-family:Algerian; font-size:300% ;"><b>MOBILE PLAN DATA</b></mypage>
+<mypage style="text-align:center; font-family:Algerian; font-size:300% ;"><b>AUDIT PLAN DATA</b></mypage>
 
 <div class="topnav">
   <a  class="active" href="Main.html"><i class="fa fa-fw fa-home"></i>Home</a>
