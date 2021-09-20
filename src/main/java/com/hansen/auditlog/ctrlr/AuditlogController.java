@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.hansen.auditlog.doa.AuditlogDao;
+import com.hansen.auditlog.dao.AuditlogDao;
 import com.hansen.auditlog.model.Auditlog;
 import com.hansen.auditlog.srvc.AuditlogService;
 

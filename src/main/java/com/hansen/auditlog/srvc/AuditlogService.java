@@ -5,7 +5,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.hansen.auditlog.doa.AuditlogDao;
+import com.hansen.auditlog.dao.AuditlogDao;
 import com.hansen.auditlog.model.Auditlog;
 
 
