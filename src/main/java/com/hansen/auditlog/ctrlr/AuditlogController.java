@@ -51,11 +51,11 @@ public class AuditlogController
 		logger.info("Inside getbyid method");
 		ResponseEntity<Object> mpResponse;
 		
-		Object mobilePlan = auditSrvc.read(id);
+		Object auditPlan = auditSrvc.read(id);
 		String m1="ID : "+id+" Not Found";
-		if(mobilePlan != null)
+		if(auditPlan != null)
 		{
-		mpResponse = new ResponseEntity<Object>(mobilePlan, null, HttpStatus.OK);
+		mpResponse = new ResponseEntity<Object>(auditPlan, null, HttpStatus.OK);
 		return mpResponse;
 		}
 		else
@@ -71,9 +71,9 @@ public class AuditlogController
 		logger.info("Inside readAll method");
 		ResponseEntity<Iterable<Auditlog>> mpResponse;
 		
-		Iterable<Auditlog> mobilePlanList = auditSrvc.readAll();
+		Iterable<Auditlog> auditPlanList = auditSrvc.readAll();
 		
-		mpResponse = new ResponseEntity<Iterable<Auditlog>>(mobilePlanList, null, HttpStatus.OK);
+		mpResponse = new ResponseEntity<Iterable<Auditlog>>(auditPlanList, null, HttpStatus.OK);
 		return mpResponse;
 	}
 	
@@ -83,11 +83,11 @@ public class AuditlogController
 	public ResponseEntity<Object> update(@RequestBody Auditlog tobemerged) {
 		logger.info("Inside update method");
 	ResponseEntity<Object> planResponse;
-	Object mobilePlanList = auditSrvc.update(tobemerged);
+	Object auditPlanList = auditSrvc.update(tobemerged);
 	String m="ID : "+tobemerged.getId()+" Not Found";
-	if(mobilePlanList != null)
+	if(auditPlanList != null)
 	{
-	planResponse = new ResponseEntity<Object>(mobilePlanList, null, HttpStatus.CREATED);
+	planResponse = new ResponseEntity<Object>(auditPlanList, null, HttpStatus.CREATED);
 	return planResponse;
 	}
 	else
