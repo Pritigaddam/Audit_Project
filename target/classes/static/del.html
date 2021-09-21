@@ -10,8 +10,8 @@
 <style>
 mypage {
   display: block;
-  background-color: #E6E6FA;
-  color:#800080 ;
+  background-color:#C1C1BD  ;
+  color: red ;
   padding: 5px;}  
   
 </style>
@@ -34,7 +34,7 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: #800080;
+  background-color:black;
 }
 
 .topnav a {
@@ -51,7 +51,7 @@ body {
 }
 
 .topnav a.active {
-  background-color: #800080;
+  background-color: black;
   color: white;
 }
 .active {
@@ -138,7 +138,7 @@ img {vertical-align: middle;}
   .text {font-size: 11px}
 }
 #main    {
-     background-color: #E6E6FA;
+     background-color:#C1C1BD;
      width: 1250px;
      margin: 50px auto;
      border: 0px solid;
@@ -202,6 +202,76 @@ button {
 }
 
 </style>
+
+
+<style>
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 450px;
+  padding: 10px;
+  background-color: white;
+  margin-left:32%;
+  margin-right:20%;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 60%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  
+  margin-right:90%;
+  
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 2;
+}
+
+</style>
+
     <!-- This is a very crude way of doing things meant for learning and training only -->
     <script type="text/javascript">
     
@@ -236,34 +306,43 @@ button {
     </script>
 
 </head>
-<body onload = "setValue()" style="background-color: #E6E6FA">
-<mypage style="text-align:center; font-family:Algerian; font-size:300% ;"><b>MOBILE PLAN DATA</b></mypage>
+
+<body onload = "setValue()" style="background-color: #C1C1BD ">
+<mypage style="text-align:center; font-family:garamond; font-size:300% ; text-shadow: -1px 1px 0 #000,
+                          1px 1px 0 #000,
+                         1px -1px 0 #000,
+                        -1px -1px 0 #000;"><b>AUDIT LOG DATA</b></mypage>
 
 <div class="topnav">
-  <a class="active" href="Main.html"><i class="fa fa-fw fa-home"></i>Home</a>
-  <a href="add_data.html"><i class="fa fa-plus"></i>Add Data</a>
-   <a href="Final.html"><i class="fa fa-eye"></i>View Data</a>
+  <a  href="Main.html"><i class="fa fa-fw fa-home"></i>Home</a>
+  <a  href="add_data.html"><i class="fa fa-plus"></i>Add Data</a>
+  <a class="active" href="Final.html"><i class="fa fa-eye"></i>View Data</a>
  <a  href="search.html"><i class="fa fa-search"></i>Search Data</a>
   </div>
   <main id="main">
-	<mypage style="text-align:center; font-family:Arial; font-size:250% ; border-bottom: 3px solid #800080;">Remove Mobile Plan Data</mypage>
+	
      <br/>
-     <br/>
-     <Center>
-      <ul class="nav">
-     <p style="font-size: 20px;"> 
-
-            Id &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input id="id" type="text" readonly /></p>   <br>
-
-   <br>   <button type="submit" class="btn" name="bt" onclick="DeleteRecord()" >Delete Data</button>
-   <!-- <input id="printRecord"  type="button" value="Insert"  onclick="DeleteRecord()"  /><img src="images/add.png" alt="Avatar" width="160" height="160" align="center">  -->
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='http://localhost:8080/del.html'><button type="button" class="cancelbtn">Cancel</button></a><br>
-     
+   
     
-    </Center>
+  <div id="myForm">
+  <form class="form-container">
+    <h1 style="text-align:center; font-family:Arial;">Delete Data</h1>
+
+    <label><b>ID</b></label>
+    <input id="id" type="text" readonly >
+
+    <button type="submit" class="btn" name="bt" onclick="DeleteRecord()">Delete</button>
+    <a href='http://localhost:8080/del.html'><button type="button" class="btn cancel">Cancel</button></a><br>
+    
+    </form>
+</div>
+    
+    
     </main>
   
    </body>  
+
+
 
 </html
 
