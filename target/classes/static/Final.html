@@ -218,17 +218,17 @@ button {
 			var mobilePlanList = document.getElementById("mobileplans");
 	
 			
-         for (var i = 0; i < mobilePlans.length; i++) {
-			mobilePlanList.innerHTML += '<tr>' +'<td class="text-align-center">'+ mobilePlans[i].id+
-                '</td>'+'<td class="text-align-center">'+mobilePlans[i].operationType+'</td>' +
-                 '<td class="text-align-center">' + mobilePlans[i].entityJson + '</td>'  +
-                  '<td class="text-align-center">' + mobilePlans[i].modificationDate + '</td>' +
-                  '<td class="text-align-center">'+
-                   "<form ><a href='http://localhost:8080/update.html?id="+mobilePlans[i].id+"&name="+mobilePlans[i].name+"&description="+mobilePlans[i].description+"&validity="+mobilePlans[i].validity+"'><input value ='Edit' id = "+mobilePlans[i].id+" type='button' /></form>"+
-                  '</td>' + '<td class="text-align-center">'+ 
-                  "<form ><a href='http://localhost:8080/del.html?id="+mobilePlans[i].id+"'><input value ='Delete' id = del"+mobilePlans[i].id+" type='button' /></form>"+
-                  '</td>' +'</tr>';
-            }
+			for (var i = 0; i < mobilePlans.length; i++) {
+				mobilePlanList.innerHTML += '<tr>' +'<td class="text-align-center">'+ mobilePlans[i].id+
+				'</td>'+'<td class="text-align-center">'+mobilePlans[i].operationType+'</td>' +
+				'<td class="text-align-center">' + mobilePlans[i].entityJson + '</td>' +
+				'<td class="text-align-center">' + mobilePlans[i].modificationDate + '</td>' +
+				'<td class="text-align-center">'+
+				 "<form ><a href='http://localhost:8080/update.html?id="+mobilePlans[i].id+"&name="+mobilePlans[i].operationType+"&description="+mobilePlans[i].entityJson+"'><input value ='Edit' id = "+mobilePlans[i].id+" type='button' /></form>"+
+                 '</td>' + '<td class="text-align-center">'+ 
+                 "<form ><a href='http://localhost:8080/del.html?id="+mobilePlans[i].id+"'><input value ='Delete' id = del"+mobilePlans[i].id+" type='button' /></form>"+
+                 '</td>' +'</tr>';
+				}
             
 		}
 	</script>
