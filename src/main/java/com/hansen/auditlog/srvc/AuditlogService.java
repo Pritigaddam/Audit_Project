@@ -57,7 +57,7 @@ public class AuditlogService {
 		// Homework... write the code to delete
 		Optional<Auditlog> person = auditlogDao.findById(planid);
 		System.out.println("hiiiiiiiiiiiii" + person);
-		if (!person.isEmpty()) {
+		if (person.isPresent()) {
 			auditlogDao.deleteById(planid);
 			return true;
 		}
