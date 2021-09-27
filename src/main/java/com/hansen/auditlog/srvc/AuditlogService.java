@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import com.hansen.auditlog.dao.AuditlogDao;
 import com.hansen.auditlog.model.Auditlog;
 
-
 @Service
 public class AuditlogService {
 
@@ -45,7 +44,8 @@ public class AuditlogService {
 		// Homework... write the code to upgrade
 		Optional<Auditlog> person = auditlogDao.findById(tobemerged.getId());
 
-		if (person.isPresent() && tobemerged.getModificationDate()!= null && tobemerged.getOperationType()!=null && tobemerged.getEntityJson()!=null && tobemerged.getId()!=0) {
+		if (person.isPresent() && tobemerged.getModificationDate() != null && tobemerged.getOperationType() != null
+				&& tobemerged.getEntityJson() != null && tobemerged.getId() != 0) {
 			Auditlog Auditlog = auditlogDao.save(tobemerged);
 			return Auditlog;
 		} else {
@@ -56,7 +56,9 @@ public class AuditlogService {
 	public boolean delete(Long planid) {
 		// Homework... write the code to delete
 		Optional<Auditlog> person = auditlogDao.findById(planid);
-		System.out.println("hiiiiiiiiiiiii" + person);
+		System.out.println(
+				"hiiiiiiiiiiiii, I am the stupidest person to add this sysout in mobileplan project which got copied here to new project by another stupid: "
+						+ person);
 		if (person.isPresent()) {
 			auditlogDao.deleteById(planid);
 			return true;
