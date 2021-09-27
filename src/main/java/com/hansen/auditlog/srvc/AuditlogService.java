@@ -15,13 +15,13 @@ public class AuditlogService {
 	AuditlogDao auditlogDao;
 
 	public Object create(Auditlog entity) {
-		Optional<Auditlog> person = auditlogDao.findById(entity.getId());
-		if (person.isPresent()) {
-			return null;
-		} else {
+//		Optional<Auditlog> person = auditlogDao.findById(entity.getId());
+//		if (person.isPresent()) {
+//			return null;
+//		} else {
 			Auditlog Auditlog = auditlogDao.save(entity);
 			return Auditlog;
-		}
+//		}
 	}
 
 	public Object read(Long id) {

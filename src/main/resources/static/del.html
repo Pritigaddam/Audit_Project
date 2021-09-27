@@ -292,7 +292,7 @@ button {
             if (id.length != 0 )  
             {  
 				var xhr = new XMLHttpRequest();
-                var url = "http://localhost:8080/audit/"+id;
+                var url = "http://localhost:8081/audit/"+id;
                 xhr.open("DELETE", url, false);
                 xhr.send();
                 alert("Audit plan deleted Successfully");
@@ -332,7 +332,7 @@ button {
     <input id="id" type="text" readonly >
 
     <button type="submit" class="btn" name="bt" onclick="DeleteRecord()">Delete</button>
-    <a href='http://localhost:8080/del.html'><button type="button" class="btn cancel">Cancel</button></a><br>
+    <a href='http://localhost:8081/del.html'><button type="button" class="btn cancel">Cancel</button></a><br>
     
     </form>
 </div>

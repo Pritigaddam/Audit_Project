@@ -275,17 +275,17 @@ button {
 <script type="text/javascript">
 		function InsertRecord()  
         {  
-            var id = document.getElementById('id').value;  
+            //var id = document.getElementById('id').value;  
             var name = document.getElementById('name').value;  
             var description = document.getElementById('description').value;  
             var validity = new Date();
             
-            if (id.length != 0 && name.length !=0 && description.length !=0 && validity.length !=0)  
+            if (name.length !=0 && description.length !=0 && validity.length !=0)  
             {  
                
                 
                 var xhr = new XMLHttpRequest();
-			    xhr.open("POST", "http://localhost:8080/audit", false);
+			    xhr.open("POST", "http://localhost:8081/audit", false);
 			    xhr.setRequestHeader("Accept", "application/json");
 				xhr.setRequestHeader("Content-Type", "application/json");
 				xhr.onreadystatechange = function () {
@@ -293,7 +293,7 @@ button {
       		    console.log(xhr.status);
       			console.log(xhr.responseText);
    				}};
-                var obj = {"id": id ,"operationType": name ,"entityJson":description ,"modificationDate": validity};
+                var obj = {"operationType": name ,"entityJson":description ,"modificationDate": validity};
 				var myjson = JSON.stringify(obj);
 				xhr.send(myjson);
 				
@@ -336,8 +336,10 @@ button {
   <form class="form-container">
     <h1 style="text-align:center; font-family:Arial;">Add Data</h1>
 
+	<!--
     <label><b>ID</b></label>
     <input id="id" type="text" required>
+    -->
 
     <label><b>Operation Type</b></label>
     <input id="name" type="text" required>
@@ -347,7 +349,7 @@ button {
 
 
     <button type="submit" class="btn" name="bt" onclick="InsertRecord()">Add</button>
-    <a href='http://localhost:8080/add_data.html'><button type="button" class="btn cancel">Cancel</button></a><br>
+    <a href='http://localhost:8081/add_data.html'><button type="button" class="btn cancel">Cancel</button></a><br>
     
     </form>
 </div>

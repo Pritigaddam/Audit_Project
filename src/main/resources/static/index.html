@@ -301,7 +301,7 @@ tr:hover {
 
 		function getmobileplanlist() {
 			var xhr = new XMLHttpRequest();
-			xhr.open("GET", "http://localhost:8080/audit", false);
+			xhr.open("GET", "http://localhost:8081/audit", false);
 			xhr.send();
 			var mpList = xhr.response;
 			
@@ -318,9 +318,9 @@ tr:hover {
 				'<td class="text-align-center" style="padding:0 17px 0 17px;">' + mobilePlans[i].entityJson + '</td>' +
 				'<td class="text-align-center" style="padding:0 17px 0 17px;">' + mobilePlans[i].modificationDate + '</td>' +
 				'<td class="text-align-center" style="padding:0 17px 0 17px;">'+
-				 "<form ><a href='http://localhost:8080/update.html?id="+mobilePlans[i].id+"&name="+mobilePlans[i].operationType+"&description="+mobilePlans[i].entityJson+"'><input value ='Edit' id = "+mobilePlans[i].id+" type='button' class='btn' /></form>"+
+				 "<form ><a href='http://localhost:8081/update.html?id="+mobilePlans[i].id+"&name="+mobilePlans[i].operationType+"&description="+mobilePlans[i].entityJson+"'><input value ='Edit' id = "+mobilePlans[i].id+" type='button' class='btn' /></form>"+
                  '</td>' + '<td class="text-align-center" style="padding:0 17px 0 17px;">'+ 
-                 "<form ><a href='http://localhost:8080/del.html?id="+mobilePlans[i].id+"'><input value ='Delete' id = del"+mobilePlans[i].id+" type='button' class='btn cancel' /></form>"+
+                 "<form ><a href='http://localhost:8081/del.html?id="+mobilePlans[i].id+"'><input value ='Delete' id = del"+mobilePlans[i].id+" type='button' class='btn cancel' /></form>"+
                  '</td>' +'</tr>';
 				}
             

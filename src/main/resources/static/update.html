@@ -295,7 +295,7 @@ button {
                
                 
                 var xhr = new XMLHttpRequest();
-			    xhr.open("PATCH", "http://localhost:8080/audit", false);
+			    xhr.open("PATCH", "http://localhost:8081/audit", false);
 			    xhr.setRequestHeader("Accept", "application/json");
 				xhr.setRequestHeader("Content-Type", "application/json");
 				xhr.onreadystatechange = function () {
@@ -348,7 +348,7 @@ button {
 
 
     <button type="submit" class="btn" name="bt" onclick="UpdateRecord()">Update</button>
-    <a href='http://localhost:8080/update.html'><button type="button" class="btn cancel">Cancel</button></a><br>
+    <a href='http://localhost:8081/update.html'><button type="button" class="btn cancel">Cancel</button></a><br>
     
     </form>
 </div>

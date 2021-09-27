@@ -302,7 +302,7 @@ tr:hover {
         function getmobileplanlist() {
             var idn =document.getElementById('id').value;  
             var xhr = new XMLHttpRequest();
-            xhr.open("GET", "http://localhost:8080/audit", false);
+            xhr.open("GET", "http://localhost:8081/audit", false);
             xhr.send();
             var mpList = xhr.response;
             var mobilePlans = JSON.parse(mpList)
@@ -355,7 +355,7 @@ tr:hover {
     <input id="id" type="text" required>
  
     <button type="submit" class="btn" name="bt" onclick="getmobileplanlist()">Search</button>
-    <a href='http://localhost:8080/search.html'><button type="button" class="btn cancel">Cancel</button></a><br>
+    <a href='http://localhost:8081/search.html'><button type="button" class="btn cancel">Cancel</button></a><br>
 
 </div>
  
