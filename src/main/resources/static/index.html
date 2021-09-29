@@ -222,11 +222,11 @@ button {
 
 /* Add styles to the form container */
 .form-container {
-  max-width: 900px;
+  max-width: 1500px;
   padding: 10px;
   background-color: white;
-  margin-left:15%;
-  margin-right:10%;
+  margin-left:5%;
+  margin-right:5%;
 }
 
 /* Full-width input fields */
@@ -316,12 +316,7 @@ tr:hover {
 				mobilePlanList.innerHTML += '<tr>' +'<td class="text-align-center" style="padding:0 17px 0 17px;">'+ mobilePlans[i].id+
 				'</td>'+'<td class="text-align-center" style="padding:0 17px 0 17px;">'+mobilePlans[i].operationType+'</td>' +
 				'<td class="text-align-center" style="padding:0 17px 0 17px;">' + mobilePlans[i].entityJson + '</td>' +
-				'<td class="text-align-center" style="padding:0 17px 0 17px;">' + mobilePlans[i].modificationDate + '</td>' +
-				'<td class="text-align-center" style="padding:0 17px 0 17px;">'+
-				 "<form ><a href='http://localhost:8081/update.html?id="+mobilePlans[i].id+"&name="+mobilePlans[i].operationType+"&description="+mobilePlans[i].entityJson+"'><input value ='Edit' id = "+mobilePlans[i].id+" type='button' class='btn' /></form>"+
-                 '</td>' + '<td class="text-align-center" style="padding:0 17px 0 17px;">'+ 
-                 "<form ><a href='http://localhost:8081/del.html?id="+mobilePlans[i].id+"'><input value ='Delete' id = del"+mobilePlans[i].id+" type='button' class='btn cancel' /></form>"+
-                 '</td>' +'</tr>';
+				'<td class="text-align-center" style="padding:0 17px 0 17px;">' + mobilePlans[i].modificationDate +'</tr>';
 				}
             
 		}
@@ -336,8 +331,8 @@ tr:hover {
                         -1px -1px 0 #000;"><b>AUDIT LOG DATA</b></mypage>
 
 <div class="topnav">
-  <a  href="Home.html"><i class="fa fa-fw fa-home"></i> Home</a>
-  <a href="add_data.html"><i class="fa fa-plus"></i> Add Data</a>
+ <!-- <a  href="Home.html"><i class="fa fa-fw fa-home"></i> Home</a>-->
+ <!-- <a href="add_data.html"><i class="fa fa-plus"></i> Add Data</a>-->
    <a class="active" href="index.html"><i class="fa fa-eye"></i> View Data</a>
  <a  href="search.html"><i class="fa fa-search"></i> Search Data</a>
   </div>
@@ -352,8 +347,8 @@ tr:hover {
 	<th style="padding:0 17px 0 17px;"> Operation Type</br></th>
 	<th style="padding:0 17px 0 17px;"> Entity JSON</br></th>
 	<th style="padding:0 17px 0 17px;"> Date Modified</th>
-	<th style="padding:0 17px 0 17px;">Edit</th>
-	<th style="padding:0 17px 0 17px;">Delete</th>
+	<!--<th style="padding:0 17px 0 17px;">Edit</th>
+	<th style="padding:0 17px 0 17px;">Delete</th>-->
 	</tr>
 	</table>
 	</form>
