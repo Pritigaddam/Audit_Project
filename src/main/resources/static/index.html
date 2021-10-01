@@ -203,7 +203,7 @@
 								var mobilePlanList = document.getElementById("mobile");
 								for (var i = 0; i < mobilePlans.length; i++) {
 									if (mobilePlans[i].id == idn) {
-										mobilePlanList.innerHTML += '<li>' + mobilePlans[i].id + "&nbsp;&nbsp;&nbsp;&nbsp;" + mobilePlans[i].operationType + "&nbsp;&nbsp;&nbsp;&nbsp;" + mobilePlans[i].entityJson + "&nbsp;&nbsp;&nbsp;&nbsp;" + mobilePlans[i].modificationDate + '</li>';
+										mobilePlanList.innerHTML += '<li>'+"ID: "+ mobilePlans[i].id + "&nbsp;&nbsp;&nbsp;&nbsp;"+"OPERATION: " + mobilePlans[i].operationType + "&nbsp;&nbsp;&nbsp;&nbsp;" +"JSON: "+ mobilePlans[i].entityJson + "&nbsp;&nbsp;&nbsp;&nbsp;" +"DATE: "+ mobilePlans[i].modificationDate + '</li>';
 										flag = 1;
 									}
 								}
