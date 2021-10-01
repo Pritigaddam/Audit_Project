@@ -25,7 +25,6 @@ public class AuditlogController {
 
 	@Autowired
 	AuditlogDao auditlogDao;
-//hiii
 	@RequestMapping(method = RequestMethod.POST)
 	public ResponseEntity<Object> create(@RequestBody Auditlog inputentity) {
 		logger.info("Inside add method");
